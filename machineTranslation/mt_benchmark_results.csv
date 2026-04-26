@@ -1,0 +1,5 @@
+Model,BLEU,chrF++,TER,METEOR,BERTScore-F1
+MarianMT (Helsinki),35.5,30.72,83.15,28.56,78.92
+NLLB-600M (Meta),56.2,48.11,62.52,48.02,85.85
+mBART-50 (Meta),48.12,41.53,77.91,40.6,83.86
+Google Translate,60.0,52.07,57.7,51.97,87.25

@@ -1,0 +1,108 @@
+================================================================================
+ MT BENCHMARK RESULTS — English → Hindi (IITB Test Set) 
+================================================================================
+                      BLEU  chrF++    TER  METEOR  BERTScore-F1
+Model                                                          
+MarianMT (Helsinki)  35.50   30.72  83.15   28.56         78.92
+NLLB-600M (Meta)     56.20   48.11  62.52   48.02         85.85
+mBART-50 (Meta)      48.12   41.53  77.91   40.60         83.86
+Google Translate     60.00   52.07  57.70   51.97         87.25
+
+Note: TER (↓ lower is better). All other metrics: higher is better.
+
+
+5 Hardest Samples (lowest avg BLEU across all models):
+  SRC : The water rail was fit and well by the time it was released.
+  REF : छोड़े जाने से पहले वाटर रेल स्वस्थ और तंदुरुस्त हो गया था।
+  MarianMT        : BLEU=7.8
+  NLLB            : BLEU=7.3
+  mBART-50        : BLEU=19.6
+  GoogleTranslate : BLEU=11.4
+
+  SRC : The rep adds: "Perhaps she is confusing him with someone else."
+  REF : प्रतिनिधि ने यह भी कहाः  "संभवतः पैरी, किसी अन्य व्यक्ति की गलतफहमी में उनके बारे में कह रही हैं"
+  MarianMT        : BLEU=5.0
+  NLLB            : BLEU=20.4
+  mBART-50        : BLEU=10.2
+  GoogleTranslate : BLEU=20.9
+
+  SRC : Kaplowitz contends the premise that holds the most weight is the epidemic of obesity.
+  REF : कैप्लोविट़ज यह नियम निर्धारित करते हैं कि इसका सबसे मुख्य कारण स्थूलता का प्रकोप है।
+  MarianMT        : BLEU=5.5
+  NLLB            : BLEU=23.4
+  mBART-50        : BLEU=19.5
+  GoogleTranslate : BLEU=17.8
+
+  SRC : They never believed he died the way the sheriff concluded.
+  REF : उन्हें शेरिफ के बताये गये तरीके से मृत्यु पर बिलकुल भी भरोसा नहीं है।
+  MarianMT        : BLEU=22.6
+  NLLB            : BLEU=18.0
+  mBART-50        : BLEU=18.8
+  GoogleTranslate : BLEU=17.4
+
+  SRC : Court blocks ruling on NYPD stop-and-frisk policy
+  REF : कोर्ट ने न्यूयार्क पुलिस विभाग के विराम और क्रीड़ा नीति पर कार्रवाई को अवरोधित किया है
+  MarianMT        : BLEU=12.1
+  NLLB            : BLEU=17.5
+  mBART-50        : BLEU=40.2
+  GoogleTranslate : BLEU=12.0
+
+
+5 Easiest Samples (highest avg BLEU across all models):
+  SRC : He did not tell anyone that Jahid has drowned.
+  REF : उसने किसी को नहीं बताया कि जाहिद डूब गया है।
+  MarianMT        : BLEU=59.6
+  NLLB            : BLEU=77.7
+  mBART-50        : BLEU=100.0
+  GoogleTranslate : BLEU=97.0
+
+  SRC : Today he will meet the families of the people who died in Patna last Sunday.
+  REF : आज वह पिछले रविवार को पटना की रैली में मारे गए लोगों के परिवारों से मिलेंगे।
+  MarianMT        : BLEU=77.6
+  NLLB            : BLEU=87.1
+  mBART-50        : BLEU=76.7
+  GoogleTranslate : BLEU=69.2
+
+  SRC : A southern Georgia judge on Wednesday ordered authorities to release all surveillance video that investigators reviewed.
+  REF : बुधवार को दक्षिणी जॉर्जिया के न्यायाधीश ने अधिकरियों को, जांचकर्ताओं द्वारा समीक्षा की गई सभी निगरानी वीडियो जारी करने का आदेश दिया।
+  MarianMT        : BLEU=55.5
+  NLLB            : BLEU=80.0
+  mBART-50        : BLEU=81.9
+  GoogleTranslate : BLEU=85.7
+
+  SRC : He said: "I really want to develop an invisible ice cream."
+  REF : उन्होंने कहाः "मैं वास्तव में एक अदृश्य आइस क्रीम विकसित करना चाहता था."
+  MarianMT        : BLEU=62.0
+  NLLB            : BLEU=73.2
+  mBART-50        : BLEU=79.7
+  GoogleTranslate : BLEU=87.7
+
+  SRC : They asked some subjects to count the number of dots on a computer screen.
+  REF : उन्होंने कुछ लोगों से कंप्यूटर स्क्रीन पर बिंदुओं की संख्या बताने को कहा।
+  MarianMT        : BLEU=66.0
+  NLLB            : BLEU=83.7
+  mBART-50        : BLEU=71.8
+  GoogleTranslate : BLEU=76.0
+
+
+======================================================================
+FINAL SCORES
+======================================================================
+                      BLEU  chrF++    TER  METEOR  BERTScore-F1
+Model                                                          
+MarianMT (Helsinki)  35.50   30.72  83.15   28.56         78.92
+NLLB-600M (Meta)     56.20   48.11  62.52   48.02         85.85
+mBART-50 (Meta)      48.12   41.53  77.91   40.60         83.86
+Google Translate     60.00   52.07  57.70   51.97         87.25
+
+======================================================================
+RANKINGS (1 = best per metric)
+======================================================================
+                     BLEU  chrF++  TER  METEOR  BERTScore-F1  Avg Rank
+Model                                                                 
+MarianMT (Helsinki)     4       4    4       4             4       4.0
+NLLB-600M (Meta)        2       2    2       2             2       2.0
+mBART-50 (Meta)         3       3    3       3             3       3.0
+Google Translate        1       1    1       1             1       1.0
+
+Overall winner (lowest avg rank): Google Translate
