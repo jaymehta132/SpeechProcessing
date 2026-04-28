@@ -1,0 +1,61 @@
+# ============================================================
+#  TTS Benchmark — requirements.txt
+#  Install all: pip install -r requirements.txt
+# ============================================================
+
+# ── Core ML framework ────────────────────────────────────────
+torch>=2.1.0            # https://pytorch.org/get-started/locally/
+                        # For GPU support install the matching CUDA wheel
+
+# ── HuggingFace ecosystem ────────────────────────────────────
+transformers>=4.40.0    # VitsModel, SpeechT5, ParlerTTS, AutoTokenizer …
+accelerate>=0.27.0      # device_map helpers for large models
+datasets>=2.18.0        # CMU-Arctic speaker embeddings for SpeechT5
+sentencepiece>=0.1.99   # tokeniser for several models
+
+# ── Coqui TTS (VITS EN/HI + XTTS v2) ────────────────────────
+TTS>=0.22.0             # pip install TTS
+                        # Downloads models on first run (~200 MB each)
+
+# ── Parler-TTS (English neural TTS) ──────────────────────────
+parler-tts>=1.0.0       # pip install parler-tts
+                        # Or from source: pip install git+https://github.com/huggingface/parler-tts
+
+# ── Audio I/O & processing ───────────────────────────────────
+soundfile>=0.12.1       # read/write WAV files
+librosa>=0.10.1         # pitch (pyin), onset detection, RMS energy
+scipy>=1.12.0           # wavfile fallback
+numpy>=1.24.0
+
+# ── ASR — Whisper (intelligibility / WER scoring) ────────────
+openai-whisper>=20231117
+                        # pip install openai-whisper
+                        # Also requires: ffmpeg (apt install ffmpeg / brew install ffmpeg)
+jiwer>=3.0.3            # WER / CER computation
+
+# ── MOS prediction — UTMOS (optional but recommended) ────────
+# utmos>=0.1.0          # pip install utmos
+#                       # If not installed, MOS column will be NaN.
+#                       # UTMOS requires: pip install torch  (already above)
+
+# ── Data / visualisation ─────────────────────────────────────
+pandas>=2.1.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# ── Optional: better prosody (Praat wrapper) ─────────────────
+# praat-parselmouth>=0.4.3   # pip install praat-parselmouth
+#                            # Enables formant / jitter / shimmer metrics
+
+# ============================================================
+#  Quick-start (CPU-only, no GPU):
+#
+#    pip install torch --index-url https://download.pytorch.org/whl/cpu
+#    pip install -r requirements.txt
+#    pip install utmos                   # optional MOS scorer
+#    sudo apt install ffmpeg             # required by Whisper
+#
+#  GPU (CUDA 12.x):
+#    pip install torch --index-url https://download.pytorch.org/whl/cu121
+#    pip install -r requirements.txt
+# ============================================================
