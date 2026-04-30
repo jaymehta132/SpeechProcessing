@@ -1,0 +1,50 @@
+# ============================================================
+#  S2S Benchmark — English → Hindi
+#  Python 3.10+ recommended
+#
+#  Setup:
+#    python -m venv s2s_env
+#    source s2s_env/bin/activate          # Windows: s2s_env\Scripts\activate
+#    pip install --upgrade pip
+#    pip install -r requirements.txt
+#
+#  System deps (install BEFORE pip):
+#    Ubuntu/Debian : sudo apt install ffmpeg libsndfile1
+#    macOS         : brew install ffmpeg libsndfile
+#    Windows       : choco install ffmpeg  (or download from ffmpeg.org)
+# ============================================================
+
+# ── Core PyTorch ─────────────────────────────────────────────
+torch>=2.1.0
+torchaudio>=2.1.0
+
+# ── HuggingFace stack ────────────────────────────────────────
+transformers>=4.40.0          # SeamlessM4Tv2, VitsModel, MarianMT
+sentencepiece>=0.2.0          # MarianMT tokeniser
+accelerate>=0.29.0            # device_map & mixed-precision helpers
+datasets>=2.19.0              # optional FLEURS test set loader
+
+# ── ASR ──────────────────────────────────────────────────────
+openai-whisper>=20240930      # Whisper (ASR step + ASR-BLEU evaluator)
+faster-whisper>=1.0.1         # CTranslate2-accelerated Whisper (optional faster backend)
+
+# ── Audio I/O & processing ───────────────────────────────────
+soundfile>=0.12.1
+librosa>=0.10.2
+scipy>=1.13.0
+numpy>=1.26.0
+pydub>=0.25.1                 # mp3↔wav conversion (needs ffmpeg)
+
+# ── Input-audio synthesis (English test utterances) ──────────
+gTTS>=2.5.1                   # Google TTS — generates English input wavs
+
+# ── Evaluation metrics ───────────────────────────────────────
+sacrebleu>=2.4.2              # BLEU + chrF
+nltk>=3.8.1                   # METEOR
+jiwer>=3.0.4                  # WER / CER for ASR quality
+evaluate>=0.4.2               # HuggingFace evaluate (convenience wrapper)
+
+# ── Reporting & misc ─────────────────────────────────────────
+tabulate>=0.9.0               # pretty ASCII tables
+tqdm>=4.66.0                  # progress bars
+matplotlib>=3.8.0             # radar / bar charts
