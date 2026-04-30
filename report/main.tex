@@ -1,0 +1,178 @@
+\documentclass{beamer}
+
+% Theme selection
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+% Title page information
+\title[S2S Translation]{Speech to Speech Translation Systems}
+\subtitle{Benchmarking and Implementation}
+\author[Tanay, Jay, Kshitij, Vatsal]{Tanay Bhat  (22B3303) \\ Jay Mehta (22B1281) \\ Kshitij Vaidya (22B1829) \\ Vatsal Melwani (22B0396)}
+\institute[IITB]{IIT Bombay}
+\date{\today}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Table of contents
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% Introduction Section
+\section{Introduction}
+
+\begin{frame}{Introduction}
+
+\end{frame}
+
+% ASR Section
+\section{Automatic Speech Recognition (ASR)}
+
+\begin{frame}{ASR: Overview}
+The ASR module of a S2S pipeline first converts the input speech into text. It involves several key components:
+\begin{itemize}
+    \item \textbf{Audio Preprocessing:} Noise reduction and feature extraction using MFCCs, Mel spectrograms etc.
+    \item \textbf{Encoder:} Responsible for capturing temporal dependencies and contextual information of the input audio using the extracted features. Typically implemented using RNNs, CNNs, or Transformers.
+    \item \textbf{Decoder:} Generates the output text sequence based on the encoder reprensentation. Current state-of-the-art models often use attention mechanisms to focus on relevant parts of the input during decoding.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ASR Benchmarking: Setup}
+\begin{itemize}
+\item Accent and dialect variation
+\item Background noise handling
+\item Real-time processing requirements
+\item Domain-specific vocabulary
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ASR Benchmarking: Results}
+\begin{itemize}
+\item Accent and dialect variation
+\item Background noise handling
+\item Real-time processing requirements
+\item Domain-specific vocabulary
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ASR Benchmarking: Inferences}
+\begin{itemize}
+\item Accent and dialect variation
+\item Background noise handling
+\item Real-time processing requirements
+\item Domain-specific vocabulary
+\end{itemize}
+\end{frame}
+
+% MT Section
+\section{Machine Translation (MT)}
+
+\begin{frame}{MT: Overview}
+\begin{itemize}
+\item Translates text from source to target language
+\item Evolution: Rule-based → Statistical → Neural
+\item Transformer architecture revolution
+\item Quality assessment and evaluation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MT: Key Approaches}
+\begin{itemize}
+\item Neural Machine Translation (NMT)
+\item Transfer learning and multilingual models
+\item Low-resource language handling
+\item Context-aware translation
+\end{itemize}
+\end{frame}
+
+% TTS Section
+\section{Text-to-Speech (TTS)}
+
+\begin{frame}{TTS: Overview}
+\begin{itemize}
+\item Converts text into natural-sounding speech
+\item Components: Text analysis, prosody generation, synthesis
+\item Neural TTS models (WaveNet, Tacotron)
+\item Voice cloning and personalization
+\end{itemize}
+\end{frame}
+
+\begin{frame}{TTS: Quality Factors}
+\begin{itemize}
+\item Naturalness and intelligibility
+\item Prosody and emotion
+\item Multi-speaker capabilities
+\item Real-time generation
+\end{itemize}
+\end{frame}
+
+% Full Pipeline Section
+\section{Full Pipeline Integration}
+
+\begin{frame}{End-to-End Pipeline}
+\begin{itemize}
+\item ASR → MT → TTS workflow
+\item Use case: Real-time speech translation
+\item Latency and quality trade-offs
+\item Error propagation considerations
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pipeline Architecture}
+\begin{itemize}
+\item Modular vs. end-to-end approaches
+\item API integration strategies
+\item Scalability and deployment
+\item Performance optimization
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Applications}
+\begin{itemize}
+\item International conference interpretation
+\item Language learning platforms
+\item Accessibility tools
+\item Customer service automation
+\end{itemize}
+\end{frame}
+
+% Conclusion Section
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Integrated ASR-MT-TTS systems enable powerful applications
+\item Continued advances in neural architectures
+\item Challenges remain in low-resource scenarios
+\item Future directions: multimodal integration, personalization
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Thank You}
+\begin{center}
+{\Large Thank you for your attention!}
+
+\vspace{1cm}
+
+Questions?
+
+\vspace{1cm}
+
+\small
+Contact: your.email@example.com
+\end{center}
+\end{frame}
+
+\end{document}
