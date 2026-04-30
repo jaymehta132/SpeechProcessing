@@ -8,4 +8,4 @@
 \beamer@sectionintoc {8}{Error Analysis \& Conclusions}{22}{0}{8}
 \beamer@sectionintoc {9}{Text-to-Speech (TTS)}{23}{0}{9}
 \beamer@sectionintoc {10}{Full Pipeline Integration}{32}{0}{10}
-\beamer@sectionintoc {11}{Conclusion}{35}{0}{11}
+\beamer@sectionintoc {11}{Conclusion}{34}{0}{11}
