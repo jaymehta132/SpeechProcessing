@@ -10,6 +10,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
+% Required packages for the block diagram
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows.meta,positioning}
 
 % Title page information
 \title[S2S Translation]{Speech to Speech Translation Systems}
@@ -99,24 +102,279 @@ The ASR module of a S2S pipeline first converts the input speech into text. It i
 
 % TTS Section
 \section{Text-to-Speech (TTS)}
-
-\begin{frame}{TTS: Overview}
-\begin{itemize}
-\item Converts text into natural-sounding speech
-\item Components: Text analysis, prosody generation, synthesis
-\item Neural TTS models (WaveNet, Tacotron)
-\item Voice cloning and personalization
-\end{itemize}
+\begin{frame}{What is Text-to-Speech (TTS)?}
+  \textbf{Text-to-Speech (TTS)} is the artificial synthesis of human-sounding speech from raw text.
+  \vspace{0.5cm}
+  
+  \begin{itemize}
+      \setlength\itemsep{1em}
+      \item \textbf{Core Objectives:} 
+      \begin{itemize}
+          \item \textit{Intelligibility:} Clear, understandable pronunciation of words.
+          \item \textit{Naturalness:} Accurate prosody, intonation, rhythm, and emotion.
+      \end{itemize}
+      
+      \item \textbf{Evolution of the Technology:}
+      \begin{itemize}
+          \item \textbf{Concatenative (1990s-2000s):} Splicing together tiny fragments of pre-recorded human speech. Highly intelligible but sounded robotic and rigid.
+          \item \textbf{Parametric (2000s-2010s):} Statistical models (like HMMs) generating audio based on parameters. Smoother, but sounded muffled or "buzzy".
+          \item \textbf{Neural (Present):} Deep learning models predicting high-fidelity audio waves directly from text, achieving near-human naturalness.
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{TTS: Quality Factors}
-\begin{itemize}
-\item Naturalness and intelligibility
-\item Prosody and emotion
-\item Multi-speaker capabilities
-\item Real-time generation
-\end{itemize}
+% Slide 2: The Block Diagram
+\begin{frame}{The Standard Neural TTS Pipeline}
+  \centering
+  
+  % Updated TikZ Block Diagram with smaller nodes
+  \begin{tikzpicture}[
+      node distance=0.5cm and 1.0cm, % Reduced spacing between nodes
+      block/.style={
+          rectangle, 
+          draw=black!70, 
+          fill=blue!10, 
+          thick, 
+          text width=1.6cm,       % Reduced width
+          align=center, 
+          rounded corners, 
+          minimum height=0.8cm,   % Reduced height
+          font=\footnotesize      % Smaller font inside the blocks
+      },
+      arrow/.style={-{Stealth[scale=1.0]}, thick, draw=black!80}
+  ]
+      % Nodes
+      \node (text) [font=\footnotesize\bfseries, align=center] {Raw\\Text};
+      \node (frontend) [block, right=of text] {Text\\Frontend};
+      \node (acoustic) [block, right=of frontend] {Acoustic\\Model};
+      \node (vocoder) [block, right=of acoustic] {Vocoder};
+      \node (audio) [font=\footnotesize\bfseries, align=center, right=of vocoder] {Audio\\Wave};
+
+      % Arrows with labels
+      \draw [arrow] (text) -- (frontend);
+      \draw [arrow] (frontend) -- node[above, font=\tiny, align=center] {Phonemes} (acoustic);
+      \draw [arrow] (acoustic) -- node[above, font=\tiny, align=center] {Mel-Spectrogram} (vocoder);
+      \draw [arrow] (vocoder) -- (audio);
+  \end{tikzpicture}
+  
+  \vspace{1.0cm}
+  
+  % Explanation Bullet Points
+  \begin{itemize}
+      \setlength\itemsep{0.5em}
+      \item \textbf{Text Frontend:} Cleans and normalizes text (e.g., expanding "180" to "one hundred eighty") and performs Grapheme-to-Phoneme (G2P) conversion to determine pronunciation.
+      \item \textbf{Acoustic Model:} Maps phonemes to acoustic representations, predicting pitch, energy, and duration. \textit{(Examples: Tacotron 2, FastSpeech)}
+      \item \textbf{Vocoder:} Reconstructs the actual time-domain audio waveform from the highly compressed Mel-spectrogram. \textit{(Examples: WaveNet, HiFi-GAN)}
+  \end{itemize}
 \end{frame}
+% \begin{frame}{TTS: Overview}
+% \begin{itemize}
+% \item Converts text into natural-sounding speech
+% \item Components: Text analysis, prosody generation, synthesis
+% \item Neural TTS models (WaveNet, Tacotron)
+% \item Voice cloning and personalization
+% \end{itemize}
+% \end{frame}
+\begin{frame}{Systems Under Evaluation}
+    \vspace{0.3cm}
+    
+    % 3-Column Layout for Side-by-Side Comparison
+    \begin{columns}[t]
+        
+        % Column 1: MMS-TTS
+        \begin{column}{0.32\textwidth}
+            \begin{block}{\small \centering \textbf{MMS-TTS}}
+                % \vspace{0.1cm}
+                \begin{itemize}\footnotesize
+                    \setlength\itemsep{0.5em}
+                    \item \textbf{Architecture:} VITS-based (End-to-End).
+                    % \item \textbf{Core Feature:} Massive multilinguality (supports 1,100+ languages).
+                    \item \textbf{Primary Strength:} Highly lightweight and efficient; state-of-the-art for low-resource languages.
+                    \item \textbf{Limitation:} Generally single-speaker per model with fixed prosody.
+                \end{itemize}
+                \vspace{0.2cm}
+            \end{block}
+        \end{column}
+
+        % Column 2: Parler-TTS
+        \begin{column}{0.32\textwidth}
+            \begin{block}{\centering \textbf{Parler-TTS}}
+                % \vspace{0.1cm}
+                \begin{itemize}\footnotesize
+                    \setlength\itemsep{0.5em}
+                    \item \textbf{Architecture:} Autoregressive Transformer.
+                    % \item \textbf{Core Feature:} Text-promptable voice styling.
+                    \item \textbf{Primary Strength:} Granular control over emotion, tone, pacing, and background noise via text descriptions.
+                    \item \textbf{Limitation:} Higher inference latency due to autoregressive generation.
+                \end{itemize}
+                \vspace{0.2cm}
+            \end{block}
+        \end{column}
+
+        % Column 3: XTTS-v2
+        \begin{column}{0.32\textwidth}
+            \begin{block}{\centering \textbf{XTTS-v2}}
+                % \vspace{0.1cm}
+                \begin{itemize}\footnotesize
+                    \setlength\itemsep{0.5em}
+                    \item \textbf{Architecture:} GPT-style + Mel/HiFi-GAN.
+                    % \item \textbf{Core Feature:} Zero-shot voice cloning.
+                    \item \textbf{Primary Strength:} Requires only $\sim$3 seconds of reference audio; supports cross-lingual voice cloning.
+                    \item \textbf{Limitation:} High resource consumption compared to non-autoregressive models.
+                \end{itemize}
+                \vspace{0.2cm}
+            \end{block}
+        \end{column}
+
+    \end{columns}
+    
+    \vspace{0.5cm}
+    
+    % Summary takeaway at the bottom
+    \begin{center}
+        \textit{\small These systems represent three distinct TTS paradigms: \textbf{Scale} (MMS), \textbf{Promptability} (Parler), and \textbf{Cloning} (XTTS).}
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}{Evaluation Metrics for TTS Models}
+    \vspace{0.1cm}
+    
+    \begin{columns}[T]
+        
+        % Column 1: Intelligibility & Speed
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Intelligibility \& Efficiency}
+                \begin{itemize}\small
+                    \setlength\itemsep{0.5em}
+                    \item \textbf{Word Error Rate (WER)} \\
+                          \textit{What it is:} Transcription accuracy of the audio using an ASR system. Lower is better. \\
+                        %   \textbf{[\textcolor{red}{$\downarrow$} Lower is Better]}
+                          
+                    \item \textbf{Character Error Rate (CER)} \\
+                          \textit{What it is:} Similar to WER, but captures finer phonetic/spelling errors. Lower is better.\\
+                        %   \textbf{[\textcolor{red}{$\downarrow$} Lower is Better]}
+                          
+                    \item \textbf{Real-Time Factor (RTF)} \\
+                          \textit{What it is:} Processing time divided by generated audio length. Lower is better. \\
+                        %   \textbf{[\textcolor{red}{$\downarrow$} Lower is Better]}
+                \end{itemize}
+            \end{block}
+        \end{column}
+
+        % Column 2: Prosody & Acoustics
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Prosody \& Expressiveness}
+                \begin{itemize}\small
+                    \setlength\itemsep{0.3em}
+                    \item \textbf{Pitch Variance ($F_0$ Std Dev)} \\
+                          \textit{What it is:} Range of intonation. \\
+                        %   \textbf{[\textcolor{blue}{$\approx$} Target Match is Better]}
+                          
+                    \item \textbf{Energy Dynamics (RMS Std)} \\
+                          \textit{What it is:} Variations in volume/loudness. \\
+                        %   \textbf{[\textcolor{blue}{$\approx$} Target Match is Better]}
+                          
+                    \item \textbf{Speaking Rate} \\
+                          \textit{What it is:} Speed (Syllables/words per sec). \\
+                        %   \textbf{[\textcolor{blue}{$\approx$} Target Match is Better]}
+                          
+                    \item \textbf{Pause Ratio (Onset/s)} \\
+                          \textit{What it is:} Frequency of breath/silence pauses. \\
+                        %   \textbf{[\textcolor{blue}{$\approx$} Target Match is Better]}
+                \end{itemize}
+            \end{block}
+        \end{column}
+
+    \end{columns}
+    
+    % \vspace{0.4cm}
+    
+    % Crucial Clarification Note
+    % \begin{center}
+        % \footnotesize{\textit{\textbf{*Note on Prosodic Metrics:} Unlike WER or RTF, acoustic metrics do not strictly benefit from being "maximized." The goal is to minimize the distance to the \textbf{Ground Truth} human audio. Too low results in robotic, flat speech; too high results in unnatural, exaggerated speech.}}
+    % \end{center}
+    
+\end{frame}
+
+\begin{frame}{TTS: Benchmarking Results}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        \textbf{Model} & \textbf{Language} & \textbf{Latency (ms)} & \textbf{RTF} & \textbf{Throughput (cps)} \\
+        \hline
+        MMS-TTS & English & 2621.382 & 0.439 & 31.711 \\
+        MMS-TTS & Hindi & 2451.2891 & 0.432 & 27.49 \\
+        Parler-TTS & English & 68026.311 & 11.264 & 1.281 \\
+        XTTS-v2 & English & 26182.9 & 3.438 & 3.491 \\
+        XTTS-v2 & Hindi & 23687.88 & 3.204 & 2.718 \\
+    \end{tabular}
+    \caption{Benchmarking results for TTS models across Performance Metrics.}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}{TTS: Benchmarking Results}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        \textbf{Model} & \textbf{Language} & \textbf{WER} & \textbf{CER} \\
+        \hline
+        MMS-TTS & English & 34.892 & 17.968\\
+        MMS-TTS & Hindi & - & -\\
+        Parler-TTS & English & 27.57 & 19.854\\
+        XTTS-v2 & English & 20.465 & 6.825\\
+        XTTS-v2 & Hindi & - & -\\    
+    \end{tabular}
+    \caption{Benchmarking results for TTS models across Performance Metrics (Contd.).}
+    \end{table}
+
+    \footnotesize{\textit{*WER/CER for Hindi were turning out to be extremely high due to ASR model's poor performance on Hindi audio, so we have omitted those values to avoid skewing the analysis.}}
+\end{frame}
+
+\begin{frame}{TTS: Benchmarking Results}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+        \textbf{Model} & \textbf{Language} & \textbf{Pitch (Mean)} & \textbf{Pitch (Std)} & \textbf{Pitch Range} \\
+        \hline
+        MMS-TTS & English & 99.978 & 19.158 & 81.388 \\
+        MMS-TTS & Hindi & 148.216 & 37.359 & 176.392 \\
+        Parler-TTS & English & 233.055 & 54.52 & 253.809 \\
+
+        XTTS-v2 & English & 141.029 & 29.674 & 136.078 \\
+
+        XTTS-v2 & Hindi & 139.625 & 16.915 & 76.358\\    
+    \end{tabular}
+    \caption{Benchmarking results for TTS models across Prosodic Metrics (Contd.).}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}{TTS: Benchmarking Results}
+    \begin{table}[]
+    \centering
+    \begin{tabular}{c|c|p{2cm}|p{2cm}|p{2cm}}
+        \textbf{Model} & \textbf{Language} & \textbf{Speaking Rate} & \textbf{Energy Dynamics} & \textbf{Pause Ratio} \\
+        \hline
+        MMS-TTS & English & 6.788 & 0.067 & 0.183 \\
+        MMS-TTS & Hindi & 5.808 & 0.093 & 0.246 \\
+        Parler-TTS & English & 5.35 & 0.082 & 0.153 \\
+        XTTS-v2 & English & 4.284 & 0.099 & 0.212 \\
+
+        XTTS-v2 & Hindi & 4.268 & 0.1002 & 0.186 \\    
+    \end{tabular}
+    \caption{Benchmarking results for TTS models across Prosodic Metrics.}
+    \end{table}
+\end{frame}
+% \begin{frame}{TTS: Quality Factors}
+% \begin{itemize}
+% \item Naturalness and intelligibility
+% \item Prosody and emotion
+% \item Multi-speaker capabilities
+% \item Real-time generation
+% \end{itemize}
+% \end{frame}
 
 % Full Pipeline Section
 \section{Full Pipeline Integration}
