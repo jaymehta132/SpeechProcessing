@@ -14,6 +14,15 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows.meta,positioning}
 
+% Custom colors
+\definecolor{mtblue}{RGB}{31,78,121}
+\definecolor{mtaccent}{RGB}{70,130,180}
+\definecolor{mtgold}{RGB}{212,160,23}
+\definecolor{mtgreen}{RGB}{56,142,60}
+\definecolor{mtred}{RGB}{198,40,40}
+\definecolor{mtlightblue}{RGB}{227,242,253}
+\definecolor{mtlightgray}{RGB}{245,245,245}
+
 % Title page information
 \title[S2S Translation]{Speech to Speech Translation Systems}
 \subtitle{Benchmarking and Implementation}
@@ -80,15 +89,118 @@ The ASR module of a S2S pipeline first converts the input speech into text. It i
 \end{frame}
 
 % MT Section
-\section{Machine Translation (MT)}
+%% ============================================================
+\section{Introduction to Machine Translation}
+%% ============================================================
 
-\begin{frame}{MT: Overview}
-\begin{itemize}
-\item Translates text from source to target language
-\item Evolution: Rule-based → Statistical → Neural
-\item Transformer architecture revolution
-\item Quality assessment and evaluation
-\end{itemize}
+\begin{frame}{What is Machine Translation?}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{block}{Definition}
+        \textbf{Machine Translation (MT)} is the automated process of translating text from one natural language to another using computational models, without human intervention.
+      \end{block}
+      \vspace{0.3cm}
+      \textbf{Key Paradigms:}
+      \begin{itemize}
+        \item \textbf{Rule-Based MT (RBMT)} — hand-crafted linguistic rules
+        \item \textbf{Statistical MT (SMT)} — phrase/word alignment probabilities
+        \item \textbf{Neural MT (NMT)} — encoder–decoder deep learning
+        \item \textbf{Large Language Models} — zero/few-shot translation
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{tikzpicture}[node distance=1.1cm, every node/.style={font=\small}]
+        \node[draw=mtblue, fill=mtlightblue, rounded corners, minimum width=3cm, minimum height=0.6cm] (src) {Source Text (EN)};
+        \node[draw=mtaccent, fill=mtaccent!15, rounded corners, minimum width=3cm, minimum height=0.7cm, below of=src] (enc) {Encoder};
+        \node[draw=mtaccent, fill=mtaccent!15, rounded corners, minimum width=3cm, minimum height=0.7cm, below of=enc] (att) {Attention / Cross-Attn};
+        \node[draw=mtaccent, fill=mtaccent!15, rounded corners, minimum width=3cm, minimum height=0.7cm, below of=att] (dec) {Decoder};
+        \node[draw=mtgreen, fill=mtgreen!15, rounded corners, minimum width=3cm, minimum height=0.6cm, below of=dec] (tgt) {Target Text (HI)};
+        \draw[->, thick, mtblue] (src) -- (enc);
+        \draw[->, thick, mtaccent] (enc) -- (att);
+        \draw[->, thick, mtaccent] (att) -- (dec);
+        \draw[->, thick, mtgreen] (dec) -- (tgt);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{The English–Hindi Translation Challenge}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Why English $\rightarrow$ Hindi?}
+        \begin{itemize}
+          \item Hindi has \textbf{600M+ speakers} globally
+          \item Significant demand in news, government, e-commerce
+          \item Morphologically rich language with complex agreement
+          \item \textbf{Low-resource} relative to European language pairs
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Key Linguistic Challenges}
+        \begin{itemize}
+          \item Script difference: Latin $\rightarrow$ Devanagari
+          \item Free word order (SOV vs.\ SVO)
+          \item Agglutinative morphology
+          \item Named entity transliteration
+          \item Code-mixing in source text
+          \item Cultural / idiomatic expressions
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \vspace{0.3cm}
+  \begin{block}{Test Set: IIT Bombay English–Hindi Corpus}
+    A widely used benchmark dataset containing aligned sentence pairs sourced from diverse domains including news, government documents, and general text.
+  \end{block}
+\end{frame}
+
+
+%% ============================================================
+\section{Systems Under Evaluation}
+%% ============================================================
+
+\begin{frame}{Systems Under Evaluation}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{[NMT] MarianMT (Helsinki-NLP)}
+        \begin{itemize}
+          \item Encoder–decoder Transformer
+          \item Trained on OPUS parallel corpora
+          \item Lightweight, fast inference
+          \item Widely used baseline in research
+        \end{itemize}
+      \end{block}
+      \vspace{0.3cm}
+      \begin{block}{[NMT] NLLB-600M (Meta AI)}
+        \begin{itemize}
+          \item No Language Left Behind initiative
+          \item 200-language multilingual model
+          \item 600M parameter variant
+          \item Dedicated low-resource language support
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{[NMT] mBART-50 (Meta AI)}
+        \begin{itemize}
+          \item Multilingual BART pre-training
+          \item Fine-tuned on 50 languages
+          \item Denoising pre-training objective
+          \item Strong cross-lingual transfer
+        \end{itemize}
+      \end{block}
+      \vspace{0.3cm}
+      \begin{block}{[API] Google Translate (API)}
+        \begin{itemize}
+          \item Commercial neural MT system
+          \item Massive proprietary training data
+          \item Continuously updated model
+          \item Industry gold-standard reference
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{MT: Key Approaches}

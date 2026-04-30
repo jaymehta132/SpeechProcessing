@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction to Machine Translation}{3}{0}{1}
+\beamer@sectionintoc {2}{Evaluation Metrics}{5}{0}{2}
+\beamer@sectionintoc {3}{Systems Under Evaluation}{7}{0}{3}
+\beamer@sectionintoc {4}{Benchmark Results}{8}{0}{4}
+\beamer@sectionintoc {5}{Sentence-Level Analysis}{13}{0}{5}
+\beamer@sectionintoc {6}{Error Analysis \& Conclusions}{16}{0}{6}
