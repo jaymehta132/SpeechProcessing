@@ -1,0 +1,191 @@
+[12:38:34] INFO     
+==================================================================
+[12:38:34] INFO       Benchmarking:  MMS-TTS
+[12:38:34] INFO     ==================================================================
+[12:39:10] INFO       [MMS-TTS] Loading facebook/mms-tts-eng …
+[12:39:14] INFO       [MMS-TTS] Loading facebook/mms-tts-hin …
+[12:39:17] INFO       [MMS-TTS] Ready for ['en', 'hi']
+[12:39:17] INFO       [MMS-TTS][EN] Starting 8 sentences …
+[12:39:23] WARNING    UTMOS not installed — MOS column will be NaN.
+  Install with: pip install utmos
+[12:39:24] INFO       [Whisper] Loading base model …
+[12:39:46] INFO         [short           ] latency= 1146.2ms  RTF=0.523  WER=0.0%  MOS=nan
+[12:42:01] INFO     
+==================================================================
+[12:42:01] INFO       Benchmarking:  MMS-TTS
+[12:42:01] INFO     ==================================================================
+[12:42:01] INFO       [MMS-TTS] Loading facebook/mms-tts-eng …
+[12:42:02] INFO       [MMS-TTS] Loading facebook/mms-tts-hin …
+[12:42:02] INFO       [MMS-TTS] Ready for ['en', 'hi']
+[12:42:02] INFO       [MMS-TTS][EN] Starting 8 sentences …
+[12:43:22] WARNING      UTMOS failed (MMS-TTS_en_short.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:43:22] INFO       [Whisper] Loading base model …
+[12:43:25] INFO         [short           ] latency= 1140.3ms  RTF=0.417  WER=0.0%  MOS=nan
+[12:43:32] WARNING      UTMOS failed (MMS-TTS_en_medium.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:43:34] INFO         [medium          ] latency= 1639.4ms  RTF=0.470  WER=11.1%  MOS=nan
+[12:43:51] WARNING      UTMOS failed (MMS-TTS_en_long.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:43:55] INFO         [long            ] latency= 3946.8ms  RTF=0.470  WER=0.0%  MOS=nan
+[12:44:07] WARNING      UTMOS failed (MMS-TTS_en_numbers.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:44:10] INFO         [numbers         ] latency= 3070.6ms  RTF=0.490  WER=70.6%  MOS=nan
+[12:44:23] WARNING      UTMOS failed (MMS-TTS_en_named_entities.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:44:26] INFO         [named_entities  ] latency= 3242.2ms  RTF=0.414  WER=41.2%  MOS=nan
+[12:44:38] WARNING      UTMOS failed (MMS-TTS_en_technical.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:44:42] INFO         [technical       ] latency= 2934.3ms  RTF=0.422  WER=58.8%  MOS=nan
+[12:44:50] WARNING      UTMOS failed (MMS-TTS_en_punctuation.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:44:53] INFO         [punctuation     ] latency= 2104.7ms  RTF=0.422  WER=30.8%  MOS=nan
+[12:45:04] WARNING      UTMOS failed (MMS-TTS_en_abbreviations.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:45:08] INFO         [abbreviations   ] latency= 2892.7ms  RTF=0.408  WER=66.7%  MOS=nan
+[12:45:08] INFO       [MMS-TTS][HI] Starting 8 sentences …
+[12:45:11] WARNING      UTMOS failed (MMS-TTS_hi_short.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:45:13] INFO         [short           ] latency=  882.5ms  RTF=0.460  WER=100.0%  MOS=nan
+[12:45:19] WARNING      UTMOS failed (MMS-TTS_hi_medium.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:45:21] INFO         [medium          ] latency= 1422.5ms  RTF=0.421  WER=112.5%  MOS=nan
+[12:45:40] WARNING      UTMOS failed (MMS-TTS_hi_long.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:45:45] INFO         [long            ] latency= 4694.9ms  RTF=0.433  WER=100.0%  MOS=nan
+[12:45:56] WARNING      UTMOS failed (MMS-TTS_hi_numbers.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:45:59] INFO         [numbers         ] latency= 2708.4ms  RTF=0.429  WER=100.0%  MOS=nan
+[12:46:12] WARNING      UTMOS failed (MMS-TTS_hi_named_entities.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:46:16] INFO         [named_entities  ] latency= 3191.5ms  RTF=0.424  WER=113.3%  MOS=nan
+[12:46:28] WARNING      UTMOS failed (MMS-TTS_hi_technical.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:46:32] INFO         [technical       ] latency= 2881.8ms  RTF=0.405  WER=111.8%  MOS=nan
+[12:46:40] WARNING      UTMOS failed (MMS-TTS_hi_punctuation.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:46:45] INFO         [punctuation     ] latency= 2126.5ms  RTF=0.415  WER=100.0%  MOS=nan
+[12:46:52] WARNING      UTMOS failed (MMS-TTS_hi_mixed_script.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:46:56] INFO         [mixed_script    ] latency= 1702.2ms  RTF=0.465  WER=100.0%  MOS=nan
+[12:46:56] INFO     
+==================================================================
+[12:46:56] INFO       Benchmarking:  SpeechT5
+[12:46:56] INFO     ==================================================================
+[12:46:56] INFO     TensorFlow version 2.19.0 available.
+[12:46:56] INFO     JAX version 0.7.2 available.
+[12:46:58] INFO       [SpeechT5] Loading model + HiFi-GAN vocoder …
+[12:47:03] ERROR      [SpeechT5] Fatal error during benchmark: microsoft/speecht5-hifigan is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[12:47:03] INFO     
+==================================================================
+[12:47:03] INFO       Benchmarking:  Parler-TTS
+[12:47:03] INFO     ==================================================================
+[12:47:04] WARNING  Flash attention 2 is not installed
+[12:47:04] INFO       [Parler-TTS] Loading parler-tts-mini-v1 …
+[12:47:49] WARNING  Config of the text_encoder: <class 'transformers.models.t5.modeling_t5.T5EncoderModel'> is overwritten by shared text_encoder config: T5Config {
+  "_name_or_path": "google/flan-t5-large",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 2816,
+  "d_kv": 64,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 16,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.46.1",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[12:47:49] WARNING  Config of the audio_encoder: <class 'parler_tts.dac_wrapper.modeling_dac.DACModel'> is overwritten by shared audio_encoder config: DACConfig {
+  "_name_or_path": "parler-tts/dac_44khZ_8kbps",
+  "architectures": [
+    "DACModel"
+  ],
+  "codebook_size": 1024,
+  "frame_rate": 86,
+  "latent_dim": 1024,
+  "model_bitrate": 8,
+  "model_type": "dac_on_the_hub",
+  "num_codebooks": 9,
+  "sampling_rate": 44100,
+  "torch_dtype": "float32",
+  "transformers_version": "4.46.1"
+}
+
+[12:47:49] WARNING  Config of the decoder: <class 'parler_tts.modeling_parler_tts.ParlerTTSForCausalLM'> is overwritten by shared decoder config: ParlerTTSDecoderConfig {
+  "_name_or_path": "/fsx/yoach/tmp/artefacts/parler-tts-mini/decoder",
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_cross_attention": true,
+  "architectures": [
+    "ParlerTTSForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1025,
+  "codebook_weights": null,
+  "cross_attention_implementation_strategy": null,
+  "dropout": 0.1,
+  "eos_token_id": 1024,
+  "ffn_dim": 4096,
+  "hidden_size": 1024,
+  "initializer_factor": 0.02,
+  "is_decoder": true,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 4096,
+  "model_type": "parler_tts_decoder",
+  "num_attention_heads": 16,
+  "num_codebooks": 9,
+  "num_cross_attention_key_value_heads": 16,
+  "num_hidden_layers": 24,
+  "num_key_value_heads": 16,
+  "pad_token_id": 1024,
+  "rope_embeddings": false,
+  "rope_theta": 10000.0,
+  "scale_embedding": false,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.46.1",
+  "use_cache": true,
+  "use_fused_lm_heads": false,
+  "vocab_size": 1088
+}
+
+[12:47:52] INFO       [Parler-TTS] Ready.
+[12:47:52] INFO       [Parler-TTS][EN] Starting 8 sentences …
+[12:47:53] WARNING  `prompt_attention_mask` is specified but `attention_mask` is not. A full `attention_mask` will be created. Make sure this is the intended behaviour.
+[12:49:10] WARNING      UTMOS failed (Parler-TTS_en_short.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:49:13] INFO         [short           ] latency=20062.9ms  RTF=10.800  WER=0.0%  MOS=nan
+[12:51:22] WARNING      UTMOS failed (Parler-TTS_en_medium.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:51:25] INFO         [medium          ] latency=32448.0ms  RTF=11.743  WER=11.1%  MOS=nan
+[12:58:31] WARNING      UTMOS failed (Parler-TTS_en_long.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[12:58:39] INFO         [long            ] latency=108471.1ms  RTF=11.782  WER=4.2%  MOS=nan
+[13:02:52] WARNING      UTMOS failed (Parler-TTS_en_numbers.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[13:03:00] INFO         [numbers         ] latency=62710.2ms  RTF=8.913  WER=47.1%  MOS=nan
+[13:08:14] WARNING      UTMOS failed (Parler-TTS_en_named_entities.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[13:08:20] INFO         [named_entities  ] latency=78900.8ms  RTF=12.114  WER=23.5%  MOS=nan
+[13:15:01] WARNING      UTMOS failed (Parler-TTS_en_technical.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[13:15:11] INFO         [technical       ] latency=100587.2ms  RTF=10.736  WER=70.6%  MOS=nan
+[13:19:05] WARNING      UTMOS failed (Parler-TTS_en_punctuation.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[13:19:10] INFO         [punctuation     ] latency=61133.5ms  RTF=11.995  WER=30.8%  MOS=nan
+[13:24:20] WARNING      UTMOS failed (Parler-TTS_en_abbreviations.wav): mutable default <class 'fairseq.dataclass.configs.CommonConfig'> for field common is not allowed: use default_factory
+[13:24:27] INFO         [abbreviations   ] latency=79896.7ms  RTF=12.031  WER=33.3%  MOS=nan
+[13:24:27] INFO       [Parler-TTS] 'hi' not supported — skipping.
+[13:24:27] INFO     
+==================================================================
+[13:24:27] INFO       Benchmarking:  Coqui-VITS
+[13:24:27] INFO     ==================================================================
+[13:24:27] ERROR      [Coqui-VITS] Fatal error during benchmark: Coqui TTS not installed: pip install TTS
+[13:24:27] INFO     
+==================================================================
+[13:24:27] INFO       Benchmarking:  XTTS-v2
+[13:24:27] INFO     ==================================================================
+[13:24:27] ERROR      [XTTS-v2] Fatal error during benchmark: Coqui TTS not installed: pip install TTS
+[13:24:27] INFO     
+  [CSV] Full results     → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_full.csv
+[13:24:27] INFO       [CSV] Summary          → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_summary.csv
+[13:24:27] INFO       [CSV] Robustness       → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_robustness.csv
+[13:24:27] INFO       [CSV] Per-model/cat    → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_per_model.csv

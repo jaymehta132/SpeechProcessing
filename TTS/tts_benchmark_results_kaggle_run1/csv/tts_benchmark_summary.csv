@@ -1,0 +1,3 @@
+model_name,language,latency_ms,rtf,throughput_cps,audio_duration_s,mos_utmos,wer,cer,pitch_mean_hz,pitch_std_hz,pitch_range_hz,speaking_rate,energy_std,pause_ratio
+MMS-TTS,en,2810.694,0.495,29.494,5.688,,28.697,15.529,100.961,17.928,82.532,6.745,0.066,0.154
+MMS-TTS,hi,2659.91,0.471,25.25,5.732,,108.651,88.198,158.092,52.798,233.288,5.97,0.095,0.252

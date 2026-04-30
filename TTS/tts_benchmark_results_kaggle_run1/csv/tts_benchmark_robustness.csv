@@ -1,0 +1,17 @@
+model_name,language,category,wer,cer
+MMS-TTS,en,short,0.0,0.0
+MMS-TTS,en,medium,11.11,6.82
+MMS-TTS,en,long,4.17,0.65
+MMS-TTS,en,numbers,47.06,43.53
+MMS-TTS,en,named_entities,17.65,5.26
+MMS-TTS,en,technical,58.82,26.73
+MMS-TTS,en,punctuation,30.77,10.13
+MMS-TTS,en,abbreviations,60.0,31.11
+MMS-TTS,hi,short,100.0,85.0
+MMS-TTS,hi,medium,100.0,91.67
+MMS-TTS,hi,long,100.0,87.16
+MMS-TTS,hi,numbers,100.0,81.25
+MMS-TTS,hi,named_entities,113.33,90.11
+MMS-TTS,hi,technical,105.88,86.36
+MMS-TTS,hi,punctuation,100.0,90.48
+MMS-TTS,hi,mixed_script,150.0,93.55

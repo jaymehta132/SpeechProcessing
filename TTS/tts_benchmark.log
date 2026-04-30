@@ -1,0 +1,33 @@
+[08:20:17] INFO     
+==================================================================
+[08:20:17] INFO       Benchmarking:  MMS-TTS
+[08:20:17] INFO     ==================================================================
+[08:20:56] INFO       [MMS-TTS] Loading facebook/mms-tts-eng …
+[08:21:00] INFO       [MMS-TTS] Loading facebook/mms-tts-hin …
+[08:21:03] INFO       [MMS-TTS] Ready for ['en', 'hi']
+[08:21:03] INFO       [MMS-TTS][EN] Starting 8 sentences …
+[08:21:09] WARNING    UTMOS not installed — MOS column will be NaN.
+  Install with: pip install utmos
+[08:21:10] INFO       [Whisper] Loading base model …
+[08:21:35] INFO         [short           ] latency= 1302.2ms  RTF=0.505  WER=0.0%  MOS=nan
+[08:21:45] INFO         [medium          ] latency= 1843.2ms  RTF=0.501  WER=11.1%  MOS=nan
+[08:22:08] INFO         [long            ] latency= 4262.1ms  RTF=0.499  WER=4.2%  MOS=nan
+[08:22:25] INFO         [numbers         ] latency= 3253.7ms  RTF=0.477  WER=47.1%  MOS=nan
+[08:22:42] INFO         [named_entities  ] latency= 3287.1ms  RTF=0.487  WER=17.6%  MOS=nan
+[08:22:58] INFO         [technical       ] latency= 3227.5ms  RTF=0.512  WER=58.8%  MOS=nan
+[08:23:11] INFO         [punctuation     ] latency= 2228.7ms  RTF=0.464  WER=30.8%  MOS=nan
+[08:23:27] INFO         [abbreviations   ] latency= 3081.1ms  RTF=0.511  WER=60.0%  MOS=nan
+[08:23:27] INFO       [MMS-TTS][HI] Starting 8 sentences …
+[08:23:33] INFO         [short           ] latency= 1001.2ms  RTF=0.517  WER=100.0%  MOS=nan
+[08:23:42] INFO         [medium          ] latency= 1588.1ms  RTF=0.496  WER=100.0%  MOS=nan
+[08:24:10] INFO         [long            ] latency= 5080.8ms  RTF=0.465  WER=100.0%  MOS=nan
+[08:24:26] INFO         [numbers         ] latency= 2864.8ms  RTF=0.459  WER=100.0%  MOS=nan
+[08:24:45] INFO         [named_entities  ] latency= 3424.8ms  RTF=0.451  WER=113.3%  MOS=nan
+[08:25:02] INFO         [technical       ] latency= 3233.6ms  RTF=0.460  WER=105.9%  MOS=nan
+[08:25:15] INFO         [punctuation     ] latency= 2252.3ms  RTF=0.447  WER=100.0%  MOS=nan
+[08:25:32] INFO         [mixed_script    ] latency= 1833.6ms  RTF=0.472  WER=150.0%  MOS=nan
+[08:25:32] INFO     
+  [CSV] Full results     → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_full.csv
+[08:25:32] INFO       [CSV] Summary          → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_summary.csv
+[08:25:32] INFO       [CSV] Robustness       → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_robustness.csv
+[08:25:32] INFO       [CSV] Per-model/cat    → /kaggle/working/tts_benchmark_results/csv/tts_benchmark_per_model.csv
