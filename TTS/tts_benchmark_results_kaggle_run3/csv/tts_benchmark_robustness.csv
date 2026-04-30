@@ -1,0 +1,15 @@
+model_name,language,category,wer,cer
+XTTS-v2,en,short,40.0,8.0
+XTTS-v2,en,medium,0.0,0.0
+XTTS-v2,en,long,4.17,0.65
+XTTS-v2,en,numbers,41.18,23.53
+XTTS-v2,en,named_entities,5.88,0.88
+XTTS-v2,en,technical,29.41,11.88
+XTTS-v2,en,punctuation,23.08,6.33
+XTTS-v2,en,abbreviations,20.0,3.33
+XTTS-v2,hi,short,200.0,200.0
+XTTS-v2,hi,medium,100.0,88.89
+XTTS-v2,hi,long,115.0,90.83
+XTTS-v2,hi,numbers,142.86,103.12
+XTTS-v2,hi,named_entities,113.33,92.31
+XTTS-v2,hi,punctuation,169.23,150.79

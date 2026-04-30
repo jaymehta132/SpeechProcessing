@@ -1,0 +1,2 @@
+model_name,latency_ms,rtf,mos_utmos,wer,cer,pitch_std_hz,energy_std,throughput_cps,Avg Rank
+XTTS-v2,1.0,1.0,,1.0,1.0,1.0,1.0,1.0,1.0
