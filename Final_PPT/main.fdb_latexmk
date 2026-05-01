@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777602367.56627 "c:/Users/Tanay/Documents/EE679/Project/SpeechProcessing/Final_PPT/main.tex" "main.pdf" "main" 1777602372.31661 0
+["pdflatex"] 1777602636.20395 "c:/Users/Tanay/Documents/EE679/Project/SpeechProcessing/Final_PPT/main.tex" "main.pdf" "main" 1777602641.90473 0
   "C:/Users/Tanay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774814378 242387 4cd0ba8baf7ab682b434fc7c9e928fa7 ""
   "C:/Users/Tanay/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1716798135 24240354 14f0a6c692a9fb30a8611f74f39d66ab ""
   "C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -255,12 +255,12 @@
   "Graphs/mt_metrics_comparison.png" 1777540166 79948 70a9dddda6c16761c7fce8cf7f36c603 ""
   "Graphs/mt_radar_chart.png" 1777540166 170806 0ffa579fc6bf91b4f08759c8a668ff5f ""
   "Graphs/mt_ter_comparison.png" 1777540166 47768 9c44ae7d4e8c61218f607fb58c52879c ""
-  "c:/Users/Tanay/Documents/EE679/Project/SpeechProcessing/Final_PPT/main.tex" 1777602366 40186 235a20ccc2f589f0c697c6956f9caadf ""
-  "main.aux" 1777602371 9122 f180c7289ee2f969e648b4642961459c "pdflatex"
-  "main.nav" 1777602372 5994 6cf3980c9fbe118d2b9f7deaf90a5b8f "pdflatex"
-  "main.out" 1777602372 1678 8e1f179d6f9c4ee2b95ba00107d84717 "pdflatex"
-  "main.tex" 1777602366 40186 235a20ccc2f589f0c697c6956f9caadf ""
-  "main.toc" 1777602372 607 ce0ca35b4a40ef184ec099d0074bf746 "pdflatex"
+  "c:/Users/Tanay/Documents/EE679/Project/SpeechProcessing/Final_PPT/main.tex" 1777602631 39401 deca76d895f030b9503354b4f1378156 ""
+  "main.aux" 1777602641 7514 15e8974eddef88ec821752ebb112ff8a "pdflatex"
+  "main.nav" 1777602641 5055 4188759a608456bf9a0728521344edd9 "pdflatex"
+  "main.out" 1777602641 832 c9ed4ac3c8225b0d53a8abe1c0ef490d "pdflatex"
+  "main.tex" 1777602631 39401 deca76d895f030b9503354b4f1378156 ""
+  "main.toc" 1777602641 298 0919e7666b71d680bc6b00351a4a49bc "pdflatex"
   (generated)
   "main.aux"
   "main.log"

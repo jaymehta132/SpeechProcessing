@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.27)  1 MAY 2026 07:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.27)  1 MAY 2026 08:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -843,7 +843,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 ] [5
 
 ]
-<Graphs/ASR_WER.png, id=231, 620.7993pt x 456.0237pt>
+<Graphs/ASR_WER.png, id=201, 620.7993pt x 456.0237pt>
 File: Graphs/ASR_WER.png Graphic file (type png)
 <use Graphs/ASR_WER.png>
 Package pdftex.def Info: Graphs/ASR_WER.png  used on input line 88.
@@ -851,7 +851,7 @@ Package pdftex.def Info: Graphs/ASR_WER.png  used on input line 88.
  [6
 
  <./Graphs/ASR_WER.png>]
-<Graphs/ASR_CER.png, id=261, 620.7993pt x 456.0237pt>
+<Graphs/ASR_CER.png, id=231, 620.7993pt x 456.0237pt>
 File: Graphs/ASR_CER.png Graphic file (type png)
 <use Graphs/ASR_CER.png>
 Package pdftex.def Info: Graphs/ASR_CER.png  used on input line 96.
@@ -859,7 +859,7 @@ Package pdftex.def Info: Graphs/ASR_CER.png  used on input line 96.
  [7
 
  <./Graphs/ASR_CER.png>]
-<Graphs/ASR_SER.png, id=291, 614.295pt x 456.0237pt>
+<Graphs/ASR_SER.png, id=261, 614.295pt x 456.0237pt>
 File: Graphs/ASR_SER.png Graphic file (type png)
 <use Graphs/ASR_SER.png>
 Package pdftex.def Info: Graphs/ASR_SER.png  used on input line 104.
@@ -867,7 +867,7 @@ Package pdftex.def Info: Graphs/ASR_SER.png  used on input line 104.
  [8
 
  <./Graphs/ASR_SER.png>]
-<Graphs/ASR_RTF.png, id=320, 604.8999pt x 456.0237pt>
+<Graphs/ASR_RTF.png, id=290, 604.8999pt x 456.0237pt>
 File: Graphs/ASR_RTF.png Graphic file (type png)
 <use Graphs/ASR_RTF.png>
 Package pdftex.def Info: Graphs/ASR_RTF.png  used on input line 112.
@@ -900,214 +900,222 @@ Overfull \vbox (2.45862pt too high) detected at line 188
 
 [12
 
-] [13
+]
+Overfull \hbox (160.18959pt too wide) in paragraph at lines 188--189
+[]\OT1/cmss/m/n/10.95 ===========================================================  
+ []
 
-] [14
 
-] [15
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13
+
+] [14] [15
+
+] [16
 
 ]
-<Graphs/mt_metrics_comparison.png, id=623, 1293.633pt x 371.9496pt>
+<Graphs/mt_metrics_comparison.png, id=622, 1293.633pt x 371.9496pt>
 File: Graphs/mt_metrics_comparison.png Graphic file (type png)
 <use Graphs/mt_metrics_comparison.png>
-Package pdftex.def Info: Graphs/mt_metrics_comparison.png  used on input line 359.
+Package pdftex.def Info: Graphs/mt_metrics_comparison.png  used on input line 346.
 (pdftex.def)             Requested size: 290.9531pt x 83.65099pt.
- [16
+ [17
 
  <./Graphs/mt_metrics_comparison.png>]
-<Graphs/mt_ter_comparison.png, id=653, 493.3632pt x 280.4076pt>
+<Graphs/mt_ter_comparison.png, id=652, 493.3632pt x 280.4076pt>
 File: Graphs/mt_ter_comparison.png Graphic file (type png)
 <use Graphs/mt_ter_comparison.png>
-Package pdftex.def Info: Graphs/mt_ter_comparison.png  used on input line 368.
+Package pdftex.def Info: Graphs/mt_ter_comparison.png  used on input line 355.
 (pdftex.def)             Requested size: 280.68465pt x 159.53447pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 368.
+(Font)              using `OT1/cmss/b/it' instead on input line 355.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/b/it' undefined
-(Font)              using `OT1/cmss/b/n' instead on input line 368.
+(Font)              using `OT1/cmss/b/n' instead on input line 355.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 368.
-[17
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 355.
+[18
 
  <./Graphs/mt_ter_comparison.png>]
 <Graphs/mt_radar_chart.png, id=681, 485.1726pt x 400.3758pt>
 File: Graphs/mt_radar_chart.png Graphic file (type png)
 <use Graphs/mt_radar_chart.png>
-Package pdftex.def Info: Graphs/mt_radar_chart.png  used on input line 377.
+Package pdftex.def Info: Graphs/mt_radar_chart.png  used on input line 364.
 (pdftex.def)             Requested size: 246.45303pt x 203.38252pt.
 
-Overfull \vbox (14.56592pt too high) detected at line 377
+Overfull \vbox (14.56592pt too high) detected at line 364
  []
 
-[18
+[19
 
  <./Graphs/mt_radar_chart.png>]
-<Graphs/mt_bleu_distribution.png, id=709, 715.473pt x 352.6776pt>
+<Graphs/mt_bleu_distribution.png, id=711, 715.473pt x 352.6776pt>
 File: Graphs/mt_bleu_distribution.png Graphic file (type png)
 <use Graphs/mt_bleu_distribution.png>
-Package pdftex.def Info: Graphs/mt_bleu_distribution.png  used on input line 423.
+Package pdftex.def Info: Graphs/mt_bleu_distribution.png  used on input line 406.
 (pdftex.def)             Requested size: 290.9531pt x 143.41483pt.
- [19
+ [20
 
  <./Graphs/mt_bleu_distribution.png>]
 <Graphs/mt_length_vs_bleu.png, id=740, 1293.1512pt x 286.1892pt>
 File: Graphs/mt_length_vs_bleu.png Graphic file (type png)
 <use Graphs/mt_length_vs_bleu.png>
-Package pdftex.def Info: Graphs/mt_length_vs_bleu.png  used on input line 432.
+Package pdftex.def Info: Graphs/mt_length_vs_bleu.png  used on input line 415.
 (pdftex.def)             Requested size: 290.9531pt x 64.38979pt.
- [20
+ [21
 
  <./Graphs/mt_length_vs_bleu.png>]
-Overfull \vbox (10.14299pt too high) detected at line 461
+Overfull \vbox (10.14299pt too high) detected at line 444
  []
 
-[21
-
-] [22
+[22
 
 ] [23
 
 ] [24
 
+] [25
+
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 677.
+(Font)              using `OT1/cmss/b/it' instead on input line 656.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 677.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 656.
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 677.
+(Font)              using `OT1/cmss/b/it' instead on input line 656.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 677.
+(Font)              using `OT1/cmss/b/it' instead on input line 656.
 
 
-Overfull \vbox (37.94542pt too high) detected at line 677
+Overfull \vbox (37.94542pt too high) detected at line 656
  []
 
-[25
+[26
 
-] [26
+] [27
 
 ]
-Overfull \hbox (4.14563pt too wide) in paragraph at lines 754--754
+Overfull \hbox (4.14563pt too wide) in paragraph at lines 733--733
  [] 
  []
 
-[27
+[28
 
-] [28
+] [29
 
 ]
-Overfull \hbox (5.03998pt too wide) in paragraph at lines 790--790
+Overfull \hbox (5.03998pt too wide) in paragraph at lines 769--769
  [] 
- []
-
-[29
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 808--808
-[]|\OT1/cmss/bx/n/10.95 Speaking
- []
-
-
-Underfull \hbox (badness 2617) in paragraph at lines 808--808
-[]|\OT1/cmss/bx/n/10.95 Pause Ra-
  []
 
 [30
 
 ]
-<Graphs/04_robustness_heatmap_en.png, id=1126, 827.7324pt x 279.9258pt>
-File: Graphs/04_robustness_heatmap_en.png Graphic file (type png)
-<use Graphs/04_robustness_heatmap_en.png>
-Package pdftex.def Info: Graphs/04_robustness_heatmap_en.png  used on input line 821.
-(pdftex.def)             Requested size: 205.37926pt x 69.4559pt.
-<Graphs/04_robustness_heatmap_en_2.png, id=1127, 823.878pt x 207.6558pt>
-File: Graphs/04_robustness_heatmap_en_2.png Graphic file (type png)
-<use Graphs/04_robustness_heatmap_en_2.png>
-Package pdftex.def Info: Graphs/04_robustness_heatmap_en_2.png  used on input line 821.
-(pdftex.def)             Requested size: 205.37926pt x 51.7649pt.
- [31
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+[]|\OT1/cmss/bx/n/10.95 Speaking
+ []
 
- <./Graphs/04_robustness_heatmap_en.png> <./Graphs/04_robustness_heatmap_en_2.png>] [32
 
-] [33
+Underfull \hbox (badness 2617) in paragraph at lines 787--787
+[]|\OT1/cmss/bx/n/10.95 Pause Ra-
+ []
+
+[31
 
 ]
-<Graphs/Full_BLEU.png, id=1211, 570.933pt x 426.393pt>
+<Graphs/04_robustness_heatmap_en.png, id=1128, 827.7324pt x 279.9258pt>
+File: Graphs/04_robustness_heatmap_en.png Graphic file (type png)
+<use Graphs/04_robustness_heatmap_en.png>
+Package pdftex.def Info: Graphs/04_robustness_heatmap_en.png  used on input line 800.
+(pdftex.def)             Requested size: 205.37926pt x 69.4559pt.
+<Graphs/04_robustness_heatmap_en_2.png, id=1129, 823.878pt x 207.6558pt>
+File: Graphs/04_robustness_heatmap_en_2.png Graphic file (type png)
+<use Graphs/04_robustness_heatmap_en_2.png>
+Package pdftex.def Info: Graphs/04_robustness_heatmap_en_2.png  used on input line 800.
+(pdftex.def)             Requested size: 205.37926pt x 51.7649pt.
+ [32
+
+ <./Graphs/04_robustness_heatmap_en.png> <./Graphs/04_robustness_heatmap_en_2.png>] [33
+
+] [34
+
+]
+<Graphs/Full_BLEU.png, id=1212, 570.933pt x 426.393pt>
 File: Graphs/Full_BLEU.png Graphic file (type png)
 <use Graphs/Full_BLEU.png>
-Package pdftex.def Info: Graphs/Full_BLEU.png  used on input line 856.
-(pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
- [34
-
- <./Graphs/Full_BLEU.png>]
-<Graphs/Full_METEOR.png, id=1240, 570.933pt x 426.393pt>
-File: Graphs/Full_METEOR.png Graphic file (type png)
-<use Graphs/Full_METEOR.png>
-Package pdftex.def Info: Graphs/Full_METEOR.png  used on input line 863.
+Package pdftex.def Info: Graphs/Full_BLEU.png  used on input line 835.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [35
 
- <./Graphs/Full_METEOR.png>]
-<Graphs/Full_chrFpp.png, id=1269, 570.933pt x 426.393pt>
-File: Graphs/Full_chrFpp.png Graphic file (type png)
-<use Graphs/Full_chrFpp.png>
-Package pdftex.def Info: Graphs/Full_chrFpp.png  used on input line 870.
+ <./Graphs/Full_BLEU.png>]
+<Graphs/Full_METEOR.png, id=1241, 570.933pt x 426.393pt>
+File: Graphs/Full_METEOR.png Graphic file (type png)
+<use Graphs/Full_METEOR.png>
+Package pdftex.def Info: Graphs/Full_METEOR.png  used on input line 842.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [36
 
- <./Graphs/Full_chrFpp.png>]
-<Graphs/Full_F0.png, id=1298, 570.933pt x 426.393pt>
-File: Graphs/Full_F0.png Graphic file (type png)
-<use Graphs/Full_F0.png>
-Package pdftex.def Info: Graphs/Full_F0.png  used on input line 877.
+ <./Graphs/Full_METEOR.png>]
+<Graphs/Full_chrFpp.png, id=1270, 570.933pt x 426.393pt>
+File: Graphs/Full_chrFpp.png Graphic file (type png)
+<use Graphs/Full_chrFpp.png>
+Package pdftex.def Info: Graphs/Full_chrFpp.png  used on input line 849.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [37
 
- <./Graphs/Full_F0.png>]
-<Graphs/Full_Energy.png, id=1328, 570.933pt x 426.393pt>
-File: Graphs/Full_Energy.png Graphic file (type png)
-<use Graphs/Full_Energy.png>
-Package pdftex.def Info: Graphs/Full_Energy.png  used on input line 884.
+ <./Graphs/Full_chrFpp.png>]
+<Graphs/Full_F0.png, id=1300, 570.933pt x 426.393pt>
+File: Graphs/Full_F0.png Graphic file (type png)
+<use Graphs/Full_F0.png>
+Package pdftex.def Info: Graphs/Full_F0.png  used on input line 856.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [38
 
- <./Graphs/Full_Energy.png>]
-<Graphs/Full_DURio.png, id=1357, 570.933pt x 426.393pt>
-File: Graphs/Full_DURio.png Graphic file (type png)
-<use Graphs/Full_DURio.png>
-Package pdftex.def Info: Graphs/Full_DURio.png  used on input line 891.
+ <./Graphs/Full_F0.png>]
+<Graphs/Full_Energy.png, id=1329, 570.933pt x 426.393pt>
+File: Graphs/Full_Energy.png Graphic file (type png)
+<use Graphs/Full_Energy.png>
+Package pdftex.def Info: Graphs/Full_Energy.png  used on input line 863.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [39
 
- <./Graphs/Full_DURio.png>]
-<Graphs/Full_RTF.png, id=1386, 570.933pt x 426.393pt>
-File: Graphs/Full_RTF.png Graphic file (type png)
-<use Graphs/Full_RTF.png>
-Package pdftex.def Info: Graphs/Full_RTF.png  used on input line 898.
+ <./Graphs/Full_Energy.png>]
+<Graphs/Full_DURio.png, id=1358, 570.933pt x 426.393pt>
+File: Graphs/Full_DURio.png Graphic file (type png)
+<use Graphs/Full_DURio.png>
+Package pdftex.def Info: Graphs/Full_DURio.png  used on input line 870.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [40
 
- <./Graphs/Full_RTF.png>]
-<Graphs/Full_Lat.png, id=1415, 570.933pt x 426.393pt>
-File: Graphs/Full_Lat.png Graphic file (type png)
-<use Graphs/Full_Lat.png>
-Package pdftex.def Info: Graphs/Full_Lat.png  used on input line 905.
+ <./Graphs/Full_DURio.png>]
+<Graphs/Full_RTF.png, id=1387, 570.933pt x 426.393pt>
+File: Graphs/Full_RTF.png Graphic file (type png)
+<use Graphs/Full_RTF.png>
+Package pdftex.def Info: Graphs/Full_RTF.png  used on input line 877.
 (pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
  [41
 
- <./Graphs/Full_Lat.png>] [42
+ <./Graphs/Full_RTF.png>]
+<Graphs/Full_Lat.png, id=1416, 570.933pt x 426.393pt>
+File: Graphs/Full_Lat.png Graphic file (type png)
+<use Graphs/Full_Lat.png>
+Package pdftex.def Info: Graphs/Full_Lat.png  used on input line 884.
+(pdftex.def)             Requested size: 273.83728pt x 204.51666pt.
+ [42
 
-] [43
+ <./Graphs/Full_Lat.png>] [43
+
+] [44
 
 ]
 \tf@nav=\write6
@@ -1129,20 +1137,20 @@ L3 programming layer <2024-04-11>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8E1F179D6F9C4EE2B95BA00107D84717;1678.
+(rerunfilecheck)             Checksum: C9ED4AC3C8225B0D53A8ABE1C0EF490D;832.
  ) 
 Here is how much of TeX's memory you used:
- 27805 strings out of 474370
- 582655 string characters out of 5740535
+ 27782 strings out of 474370
+ 582427 string characters out of 5740535
  1949754 words of memory out of 5000000
- 49545 multiletter control sequences out of 15000+600000
+ 49525 multiletter control sequences out of 15000+600000
  574768 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,467b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tanay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on main.pdf (43 pages, 1154736 bytes).
+Output written on main.pdf (44 pages, 1156272 bytes).
 PDF statistics:
  1561 PDF objects out of 1728 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
- 866 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 94 named destinations out of 1000 (max. 500000)
+ 826 words of extra memory for PDF output out of 10000 (max. 10000000)
 

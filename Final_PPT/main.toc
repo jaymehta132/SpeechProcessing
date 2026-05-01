@@ -1,10 +1,5 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@sectionintoc {2}{Automatic Speech Recognition (ASR)}{4}{0}{2}
-\beamer@sectionintoc {3}{Introduction to Machine Translation}{11}{0}{3}
-\beamer@sectionintoc {4}{Evaluation Metrics}{13}{0}{4}
-\beamer@sectionintoc {5}{Systems Under Evaluation}{14}{0}{5}
-\beamer@sectionintoc {6}{Benchmark Results}{15}{0}{6}
-\beamer@sectionintoc {7}{Sentence-Level Analysis}{19}{0}{7}
-\beamer@sectionintoc {8}{Error Analysis \& Conclusions}{22}{0}{8}
-\beamer@sectionintoc {9}{Text-to-Speech (TTS)}{23}{0}{9}
-\beamer@sectionintoc {10}{Full Pipeline Integration}{32}{0}{10}
+\beamer@sectionintoc {3}{Machine Translation (MT)}{11}{0}{3}
+\beamer@sectionintoc {4}{Text-to-Speech (TTS)}{24}{0}{4}
+\beamer@sectionintoc {5}{Full Pipeline Integration}{33}{0}{5}
