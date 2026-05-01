@@ -351,7 +351,7 @@ We use word error rate (WER), character error rate (CER), sentence error rate (S
 
 \begin{frame}{Metrics Comparison Chart}
   \begin{center}
-    \includegraphics[width=0.85\textwidth]{/Users/kshitijvaidya/Semester8/SpeechProcessing/SpeechProcessing/Final_PPT/Graphs/mt_metrics_comparison.png}
+    \includegraphics[width=0.85\textwidth]{Graphs/mt_metrics_comparison.png}
   \end{center}
   \vspace{-0.2cm}
   \small
@@ -360,7 +360,7 @@ We use word error rate (WER), character error rate (CER), sentence error rate (S
 
 \begin{frame}{TER Comparison}
   \begin{center}
-    \includegraphics[width=0.82\textwidth]{/Users/kshitijvaidya/Semester8/SpeechProcessing/SpeechProcessing/Final_PPT/Graphs/mt_ter_comparison.png}
+    \includegraphics[width=0.82\textwidth]{Graphs/mt_ter_comparison.png}
   \end{center}
   \vspace{-0.2cm}
   \small
@@ -369,7 +369,7 @@ We use word error rate (WER), character error rate (CER), sentence error rate (S
 
 \begin{frame}{Radar Chart — Multi-Metric Profile}
   \begin{center}
-    \includegraphics[width=0.72\textwidth]{/Users/kshitijvaidya/Semester8/SpeechProcessing/SpeechProcessing/Final_PPT/Graphs/mt_radar_chart.png}
+    \includegraphics[width=0.72\textwidth]{Graphs/mt_radar_chart.png}
   \end{center}
   \vspace{-0.2cm}
   \small
@@ -415,7 +415,7 @@ We use word error rate (WER), character error rate (CER), sentence error rate (S
 
 \begin{frame}{BLEU Score Distribution}
   \begin{center}
-    \includegraphics[width=0.85\textwidth]{/Users/kshitijvaidya/Semester8/SpeechProcessing/SpeechProcessing/Final_PPT/Graphs/mt_bleu_distribution.png}
+    \includegraphics[width=0.85\textwidth]{Graphs/mt_bleu_distribution.png}
   \end{center}
   \vspace{-0.2cm}
   \small
@@ -424,7 +424,7 @@ We use word error rate (WER), character error rate (CER), sentence error rate (S
 
 \begin{frame}{Sentence Length vs.\ BLEU Score}
   \begin{center}
-    \includegraphics[width=0.85\textwidth]{/Users/kshitijvaidya/Semester8/SpeechProcessing/SpeechProcessing/Final_PPT/Graphs/mt_length_vs_bleu.png}
+    \includegraphics[width=0.85\textwidth]{Graphs/mt_length_vs_bleu.png}
   \end{center}
   \vspace{-0.2cm}
   \small
@@ -830,47 +830,91 @@ We also implemented a full S2S pipeline using few of the models that we benchmar
 \item \textbf{MT:} Helsinki-NLP Opus-MT (English to Hindi) (77M parameters)
 \item \textbf{TTS:} MMS-TTS by Meta AI (559M parameters)
 \end{itemize}
+
+We use 8 predefined sentences as input to the pipeline and evaluate the output on various metrics. All audios were sampled at 16khz and dynamically aligned to ensure fair comparison between input and output audio for acoustic metrics.
 \end{frame}
 
-\begin{frame}{S2S pipeline: Scoring Metrics}
+\begin{frame}{S2S Pipeline: Scoring Metrics}
 We use the following scoring metrics for the end-to-end pipeline:
 \begin{itemize}
-\item \textbf{METEOR:} Measure n-gram precision and recall while accounting for synonyms and stemming.
+\item \textbf{METEOR:} Measures n-gram precision and recall while accounting for synonyms and stemming.
 \item \textbf{chrF++:} Extends character n-gram F-score with word-level n-grams, capturing both fine-grained and coarse-grained translation quality.
 \item \textbf{RTF:} Real-time factor, measuring the speed of the system relative to real-time processing.
 \item \textbf{Latency:} Time taken for the system to process and respond to input.
-% \item TODO : add prosodic metrics for the end-to-end pipeline as well
+\item \textbf{Text BLEU:} Measures the quality of the transcribed text from ASR against the original input text.
+\item \textbf{F0 Pitch Correlation:} Measures the similarity between the pitch between in input and output audio.
+\item \textbf{Energy RMS Correlation:} Measures the similarity between the loudness between in input and output audio.
+\item \textbf{Duration Ratio:} Ratio between the output and input audio length.
 \end{itemize}
 \end{frame}
 
-% \begin{frame}{S2S pipeline: Results}
-% TODO add graphs
-% \end{frame}
+\begin{frame}{S2S Pipeline: Results - Text BLEU}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_BLEU.png}
+\end{figure}
+\end{frame}
 
-% Conclusion Section
-\section{Conclusion}
+\begin{frame}{S2S Pipeline: Results - METEOR}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_METEOR.png}
+\end{figure}
+\end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{S2S Pipeline: Results - chrF++}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_chrFpp.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Results - F0 Pitch Correlation}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_F0.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Results - Energy RMS Correlation}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_Energy.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Results - Duration Ratio}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_DURio.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Results - RTF}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_RTF.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Results - Latency}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Graphs/Full_Lat.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{S2S Pipeline: Conclusions}
 \begin{itemize}
-\item Integrated ASR-MT-TTS systems enable powerful applications
-\item Continued advances in neural architectures
-\item Challenges remain in low-resource scenarios
-\item Future directions: multimodal integration, personalization
+\item SeamlessM4T- V2 outperforms the custom pipeline over the metrics by still has a lot of room for improvement in terms of latency and RTF.
+\item The input audio is that of a female speaker which is matched well by the SeamlessM4T-V2 model but not as well by the custom pipeline which outputs the audio in a male voice.
+\item We see that if an error is made in the ASR stage, it propagates through the pipeline and results in a much lower METEOR and chrF++ score.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Thank You}
 \begin{center}
-{\Large Thank you for your attention!}
-
-\vspace{1cm}
-
-Questions?
-
-\vspace{1cm}
-
-\small
-Contact: your.email@example.com
+{\Large Thank you!}
 \end{center}
 \end{frame}
 
